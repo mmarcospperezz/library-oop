@@ -54,8 +54,13 @@ public class Biblioteca {
         return countyears;
     }
 
-    public void findBook (String isbn){
-
+    public Book findBook (String isbn){
+        for ( Book book : libros){
+            if (book.getIsbn().equals(isbn)){
+                return book;
+            }
+        }
+        return null;
     }
 
     public String getNombre() {
